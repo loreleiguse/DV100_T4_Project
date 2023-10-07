@@ -1,0 +1,98 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+
+/* Text */
+
+.head-text{
+    text-align: center;
+    padding-top: 40px;
+}
+/* Nav */
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+
+.nav-link{
+    color:rgba(255, 255, 255, 0.6) ;
+}
+
+.nav-link:hover{
+    color: #ff7315;
+}
+
+.nav-link.active{
+    border-bottom: 2px solid white;
+    color: #ff7315;
+}
+
+
+/* Carousel */
+
+.hero-image-container {
+    position: relative;
+}
+  
+.hero-slide {
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+}
+  
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+.hero-text {
+    position: absolute;
+    top: 50%; 
+    left: 25%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    color: white; 
+    padding: 30px; 
+    max-width: 35%; 
+}
+  
+.hero-text button {
+    background-color: #ff7315;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bi bi-bookmark{
+    color: #ff7315;
+    margin-left: 15px;
+}
