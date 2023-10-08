@@ -6,12 +6,12 @@ body{
 }
 /* Text */
 
-.review-text{
+.z-review-text{
     text-align: center;
     color: white;
 }
 
-.review-text h1, h4{
+.z-review-text h1, h4{
     color: #232020;
 }
 
@@ -21,7 +21,7 @@ body{
     color: #ff7315;
 }
 
-.head-text{
+.z-head-text{
     text-align: center;
     padding-top: 60px;
     color: #ff7315;
@@ -43,12 +43,12 @@ nav:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.navbar-brand {
+.z-navbar-brand {
     display: flex;
     align-items: center;
 }
 
-.navbar-brand img {
+.z-navbar-brand img {
     width: 350px;
 
 }
@@ -77,28 +77,28 @@ nav:hover{
 
 /* Carousel */
 
-.background{
+.z-background{
     padding-top: 50px;
     background-color: #ff7315;
 }
 
-.box{
+.z-box{
    padding-top: 50px;
    padding-bottom: 50px;
     
 }
 
-.hero-image-container {
+.z-hero-image-container {
     position: relative;
 }
   
-.hero-slide {
+.z-hero-slide {
     height: 90vh;
     width: 100%;
     background-position: center;
 }
   
-.image-overlay {
+.z-image-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -108,7 +108,7 @@ nav:hover{
     z-index: 1;
 }
   
-.hero-text {
+.z-hero-text {
     position: absolute;
     top: 50%; 
     left: 25%; 
@@ -119,7 +119,7 @@ nav:hover{
     max-width: 35%; 
 }
   
-.hero-text button {
+.z-hero-text button {
     background-color: #ff7315;
     color: white;
     border: none;
