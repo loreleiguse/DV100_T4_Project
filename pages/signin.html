@@ -13,23 +13,25 @@
 <body style="background-color: #434142;">
     
     <!-- Nav Bar -->
-    <nav></nav>
-    <div class="container">
-        <div class="row">
-            <div class=col-6>
-                <div id="logo" class=" mt-4">
-
-                </div>
-            </div>
-            <div class="col-6 pt-4" style="padding-left: 15vh;">
-                <div id="icons">
-                    <img src="../Assets/Wi-Fi.png">
-                    <img src="../Assets/Full Battery.png" style="padding-left: 1vh;">
-                </div>
-            
-            </div>
+    <nav class="navbar fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="z-navbar-brand"><a href="#"> <img src="../Assets/DV_104_Logo_Final-02.png"></a></div>
+            <ul class="nav">
+                <li class="z-nav-item">
+                    <a class="nav-link" href="/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/library.html">LIBRARY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/watchlist.html">WATCH LIST</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/pages/signin.html"><i class="bi bi-person-circle" style="margin-right: 5px;"></i>SIGN IN</a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
 
     <!-- Main Logo -->
@@ -98,10 +100,30 @@
 
     <!-- Footer -->
     <footer>
-        <div id="bottomBar" class="fixed-bottom">
-            <div id="bottomLine">
-            
-            </div>
+        <div class="footer-content">
+          <div class="logo-footer">
+            <img src="./Assets/DV_104_Logo_Final-02.png" alt=""  href="/index.html">
+          </div>
+          <div class="quick-menu">
+            <h4>QUICK MENU</h4>
+            <h6 href="/index.html">HOME</h6>
+            <h6>LIBRARY</h6>
+            <h6>WATCH LIST</h6>
+          </div>
+    
+          <div class="contact-us">
+            <h4>CONTACT US</h4>
+            <h6>+27 98 678 483</h6>
+            <h6>Info@shufflewatch.co.za</h6>
+          </div>
+          <div class="social-links">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-tiktok"></i>
+          </div>
+        </div>
+        <div class="color-box">
+          <div class="color-text"><p>© 2023 SHUFFLEWATCH. Inc. All rights reserved.</p></div>
         </div>
     </footer>
 
