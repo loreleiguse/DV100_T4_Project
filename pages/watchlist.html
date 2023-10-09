@@ -10,14 +10,54 @@
     <link rel="stylesheet" href="../styles/main.css">
 
     <style>
+        
+h1 {
+    font-size: 28px;
+}
+
+/* If the screen size is 768px wide or more, set the font-size to 30px */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+    h1 {
+      font-size: 56px;
+    }
+}
+
+/* If the screen size is 768px wide or more, set the font-size to 30px */
+@media (min-width: 768px) {
+    h3 {
+        font-size: 30px;
+    }
+}
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+    h5 {
+      font-size: 20px;
+    }
+}
+
+
         body {
-            background-color: black;
+            background-color: #232020;
             background-size:cover;
             color: #fff; /* Adjust text color for visibility */
             padding-top: 100px;
             margin-bottom: 50px;
             height:auto;
         }
+        .container-header{
+            background-image: url(../assets/joker.jpg);
+          
+        }
+
+        
 
         .card {
             width: 252px;
@@ -33,7 +73,7 @@
         }
         .card-container {
             padding: 20px; 
-            margin-bottom:20px; 
+            margin-bottom:60px; 
         }
 
        .invisible-button {
@@ -83,57 +123,47 @@
         }
 
         
-
-        
     </style>
 
 </head>
 <body>
     
-    <!-- Nav Bar -->
-    <div class="navbar fixed-top">
-        <div class="container">
-  
-
-         <!-- logo -->
-         <a class="navbar-brand" href="#">
-            <img src="../assets/white logo.png" alt="Logo" height="32">
-          </a>
-  
-          <!-- nav items -->
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
+   <!-- Nav Bar -->
+   <nav class="navbar fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="z-navbar-brand"><a href="#"> <img src="../Assets/DV_104_Logo_Final-02.png"></a></div>
+        <ul class="nav">
+            <li class="z-nav-item">
+                <a class="nav-link" href="/index.html">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="library.html">Library</a>
+                <a class="nav-link" href="/pages/library.html">LIBRARY</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="watchlist.html">Wishlist</a>
+                <a class="nav-link active" aria-current="page" href="/pages/watchlist.html">WATCH LIST</a>
             </li>
             <li class="nav-item">
-                <div class="user-info">
-                    <img src="../assets/User.svg" alt="User Icon" class="user-icon">
-                    <span class="user-name">Jonathan</span>
-                  </div>
-              </li>
-          </ul>
-        </div>
+                <a class="nav-link" href="/pages/signin.html"><i class="bi bi-person-circle" style="margin-right: 5px;"></i>SIGN IN</a>
+            </li>
+        </ul>
     </div>
-    </nav>
+</nav>
 
     
   <!-- header -->
-    <div class="container container-header">
+    <div class="container container-header full-height">
         <div class="row">
-          <div class="col-l">
+          <div class="col-xl">
             <h1>The Joker </h1>
             <p>Arthur Fleck, a party clown, leads an impoverished life with his ailing mother.</p>
             <p>However, when society shuns him and brands him as a freak,</p>
             <p> decides to embrace the life of crime and chaos.</p>
             <button class="mt-4">Watch Now</button>
             <button class="invisible-button" >Add to Watchlist</button>
-           <img src="../assets/Bookmark.svg"alt="Image" class="button-image">
+           <img src="../assets/Bookmark.svg"alt="bookmark" class="button-image">
+          </div>
+        </div>
+    </div>
 
 
         
@@ -142,72 +172,57 @@
 
  <div class="container card-container">
     <div class="row gy-4">
+        <h3>My Watchlist</h3>
         <!-- Card 1 -->
         <div class="col-md-3">
-            <div class="card">
+            <div class="card-container">
                 <!-- Card content -->
                 <img src="../assets/oppenheimer.jpg" class="card-img-top" alt="...">
                 <p>Oppenheimer</p>
-                <p>Oppenheimer</p>
-                <p>Oppenheimer</p>
-                <p>Oppenheimer</p>
+                <p>Christopher Nolan</p>
+                <p>2023</p>
+                <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
             </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-3">
-            <div class="card">
+            <div class="card-container">
                 <!-- Card content -->
                 <img src="../assets/insidious_ the red door.jpg" class="card-img-top" alt="...">
+                <p>Oppenheimer</p>
+                <p>Christopher Nolan</p>
+                <p>2023</p>
+                <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+                
             </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-3">
-            <div class="card">
+            <div class="card-container">
                 <!-- Card content -->
                 <img src="../assets/barbie.jpg" class="card-img-top" alt="...">
+                <p>Oppenheimer</p>
+                <p>Christopher Nolan</p>
+                <p>2023</p>
+                <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
             </div>
         </div>
         <!-- Card 4 -->
         <div class="col-md-3">
-            <div class="card">
+            <div class="card-container">
                 <!-- Card content -->
                 <img src="../assets/the flash.jpg" class="card-img-top" alt="...">
+                <p>Oppenheimer</p>
+                <p>Christopher Nolan</p>
+                <p>2023</p>
+                <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
             </div>
         </div>
-         <!-- Card 5 -->
-         <div class="col-md-3">
-            <div class="card">
-                <!-- Card content -->
-                <img src="../assets/talk to me.jpg" class="card-img-top" alt="...">
-            </div>
-        </div>
-         <!-- Card 6 -->
-         <div class="col-md-3">
-            <div class="card">
-                <!-- Card content -->
-                <img src="../assets/pearl.jpg" class="card-img-top" alt="...">
-            </div>
-        </div>
-         <!-- Card 7 -->
-         <div class="col-md-3">
-            <div class="card">
-                <!-- Card content -->
-                <img src="../assets/superbad.jpg" class="card-img-top" alt="...">
-            </div>
-        </div>
-         <!-- Card 8 -->
-         <div class="col-md-3">
-            <div class="card">
-                <!-- Card content -->
-                <img src="../assets/Léon_The Professional.jpg" class="card-img-top" alt="...">
-            </div>
-        </div>
+       
     </div>
 </div>
 
-    <!-- Footer -->
-    <footer></footer>
-
+   
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
