@@ -166,3 +166,162 @@ p {
 }
 
 
+/*Library Page Start*/
+/* 
+font-family: 'Dela Gothic One', cursive;
+font-family: 'Josefin Sans', sans-serif;
+*/
+  .Jform-control{
+    background-image: url(../assets/libraryPage/searchIcon.png);
+    background-position: right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: #FF7315;
+    border: px50;
+    border-color: #FF7315;
+  }
+  .JlogoImg{
+    height: 50px;
+    width: 80px;
+  }
+
+  .Jbody{
+    background-image: url(../assets/libraryPage/moonlightHeader.jpg);
+    overflow-x: hidden;
+
+    background-repeat: no-repeat;
+    background-color: #3A3535;
+    background-size: cover;
+
+  }
+ .JnavB{
+    text-align: center;
+ }
+ .Jhead{
+    width:40%;
+    height:100%;
+    margin-left: 10%;
+    margin-right: auto;
+    padding-top: 100px;
+    background-color: transparent;
+    
+ }
+ .Jlibrary{
+    width: 100%;
+    height: 800px;
+    background-color: #3A3535;
+ }
+ .LheadT{
+    font-family: 'Dela Gothic One', cursive;
+    color: #ffff;
+    font-size: 75px;
+    margin-bottom: 100px;
+ }
+  .LparT{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFF;
+    font-size: 25px;
+    margin-bottom: 100px;
+  }
+  .btnWatchL{
+    background-color: #FF7315;
+    border-color: #FF7315;
+    margin-bottom: 100px;
+  }
+  .btnWatchL:hover{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .btnAddtWL{
+    background-color:  transparent;
+    border-color: transparent;
+    margin-bottom: 100px;
+  }
+  .btnAddtWL:hover{
+    background-color: #FF7315;
+    border-color: #FF7315;
+  }
+  .btnBookmarkL{
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url(../assets/libraryPage/BookmarkSymbolLpluss.png);
+    width: 35px;
+    height: 50px;
+    background-size: 100%;
+    margin-bottom: 100px;
+  }
+  .btnBookmarkL:hover{
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url(../assets/libraryPage/BookmarkSymbolLpluss.png);
+    width: 36px;
+    height: 50px;
+    background-size: 100%
+  }
+  .JrowS{
+    width: 75%;
+    margin-top: 50px;
+  }
+  .Jcol1{
+    width: 10%;
+    background-color: #3A3535;
+  }
+  .Jcol2{
+    width: 80%;
+  }
+  .Jcard{
+    margin-top: 30px;
+  }
+  .JcardIn{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .JcardTH{
+    color: #ffff;
+  }
+  .JcardT{
+    color: #ffff;
+  }
+
+  .JcardImgTop:hover{
+    opacity: 30%;
+    transition: 0.5s;
+  }
+  .Jdrop{
+    background-color: #FF7315;
+    border-color: #FF7315;
+    width: 150px;
+  }
+  .Jdrop:hover{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .JnavH{
+    height: 100%;
+  }
+
+
+@media(max-width: 1200px){
+  .JdropS{
+    margin: 5px;
+  }
+  .JnavH{
+    height: 5px;
+  }
+.Jrow1{
+    height: 50%;
+  }
+.Jhead{
+  width: 80%;
+  height: 50%;
+}
+.LheadT{
+  font-size: 50px;
+}
+.LparT{
+  width: auto;
+}
+
+}
+
+/*Library Page End*/

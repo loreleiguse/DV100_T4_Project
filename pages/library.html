@@ -8,15 +8,144 @@
     <!-- Style Sheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="Jbody">
     
     <!-- Nav Bar -->
-    <nav></nav>
+    <nav>
+        <nav class="navbar navbar-dark navbar-expand-lg JnavH">
+            <div class="container-fluid Jrow-1">
+              <a class="navbar-brand" href="../index.html"><img class="JlogoImg" src="../assets/libraryPage/shuffleWatchLogo.png"></a>
+              <form class="d-flex" role="search">
+                <input class="form-control Jform-control" type="search" placeholder="Search" aria-label="Search">
+              </form>
+              <div class="collapse navbar-collapse Jrow-2" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../pages/library.html">Library</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/watchlist.html">Watchlist</a>
+                  </li>
+                </ul>
+            
+                <ul style="text-align: right; margin-right: 10%;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><img src="../assets/libraryPage/userProfileImage.png" style="height: 10%; width: 10%;"></a>
+                      </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="Jhead">
+            <h1 class="LheadT">Moonlight</h1>
+            <h6 class="LparT">Chiron, a young African-American boy, finds guidance in Juan, a drug dealer, who teaches him to carve his own path. As he grows up in Miami, Juan's advice leaves a lasting impression on him.</h6>
+            <button type="button" class="btn btn-primary btnWatchL">Watch Now</button>
+            <button type="button" class="btn btn-primary btnAddtWL">Add to Watchlist</button>
+            <button type="button" class="btn btn-primary btnBookmarkL"></button>
+        </div>
+        </nav>
+
+
+        <div class="row">
+            <div class="col-4 Jcol1">
+            </div>
+
+            <div class="Jlibrary col-4 Jcol2">
+                <h6 class="LparT" style="padding-top: 50px;">Movie Library</h6>
+                <div class="row JrowS">
+                    <div class="dropdown col-12 col-md-4 JdropS">
+                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Status
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-12 col-md-4 JdropS">
+                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Year
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-12 col-md-4 JdropS">
+                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Rating
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row Jcard">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card JcardIn" style="width: 18rem;">
+                            <img src="../assets/libraryPage/moonlightCard.jpg" class="card-img-top JcardImgTop" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title JcardTH">Moonlight</h5>
+                            <p class="card-text JcardT">Chiron, a young African-American boy, finds guidance in Juan, a drug dealer, who teaches him to carve his own path. As he grows up in Miami, Juan's advice leaves a lasting impression on him.</p>
+                            <a href="#" class="btn btn-primary btnWatchL">Add to Watchlist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card JcardIn" style="width: 18rem;">
+                            <img src="../assets/libraryPage/moonlightCard.jpg" class="card-img-top JcardImgTop" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title JcardTH">Moonlight</h5>
+                            <p class="card-text JcardT">Chiron, a young African-American boy, finds guidance in Juan, a drug dealer, who teaches him to carve his own path. As he grows up in Miami, Juan's advice leaves a lasting impression on him.</p>
+                            <a href="#" class="btn btn-primary btnWatchL">Add to Watchlist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card JcardIn" style="width: 18rem;">
+                            <img src="../assets/libraryPage/moonlightCard.jpg" class="card-img-top JcardImgTop" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title JcardTH">Moonlight</h5>
+                            <p class="card-text JcardT">Chiron, a young African-American boy, finds guidance in Juan, a drug dealer, who teaches him to carve his own path. As he grows up in Miami, Juan's advice leaves a lasting impression on him.</p>
+                            <a href="#" class="btn btn-primary btnWatchL">Add to Watchlist</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card JcardIn" style="width: 18rem;">
+                            <img src="../assets/libraryPage/moonlightCard.jpg" class="card-img-top JcardImgTop" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title JcardTH">Moonlight</h5>
+                            <p class="card-text JcardT">Chiron, a young African-American boy, finds guidance in Juan, a drug dealer, who teaches him to carve his own path. As he grows up in Miami, Juan's advice leaves a lasting impression on him.</p>
+                            <a href="#" class="btn btn-primary btnWatchL">Add to Watchlist</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 Jcol1"></div>
+    </div>
+    
+    
+
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+        
+    </footer>
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
