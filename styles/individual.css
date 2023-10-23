@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Josefin+Sans&display=swap');
+
+body{
+    background-color: #3A3535;
+    color: white;
+}
+
+header{
+    width: 100%;
+    height: 800px;
+    background-image: url("../assets/barbie.jpeg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.overlay{
+    width: 100%;
+    height: 800px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Nav */
+
+nav:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.z-navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.z-navbar-brand img {
+    width: 350px;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+
+.nav-link{
+    color:rgba(255, 255, 255, 0.6) ;
+}
+
+.nav-link:hover{
+    color: #ff7315;
+}
+
+.nav-link.active{
+    border-bottom: 2px solid white;
+    color: #ff7315;
+}
+
+/* Header */
+
+.hero{
+    width: 30%;
+    margin-top: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.hero h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 80px;
+}
+
+.hero p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.button-group{
+    height: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.watch{
+    width: 160px;
+    height: 40px;
+    border: 3px solid #FF7315;
+    background-color: #FF7315;
+    color: white;
+    text-align: center;
+    float: left;
+    padding-top: 5px;
+    border-radius: 70px;
+    margin-right: 20px;
+}
+
+.watch:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.add{
+    width: 200px;
+    height: 40px;
+    border: 3px solid #FF7315;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-align: center;
+    float: left;
+    padding-top: 5px;
+    border-radius: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.add:hover{
+    cursor: pointer;
+    background-color: #FF7315;
+    color: white;
+}
+
+.row{
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.row h1{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.row p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.card{
+    background-color: #3A3535;
+    color: white;
+    border: none;
+}
+
+.card-img-top{
+    border-radius: 0px;
+}
+
+/* Footer */
+
+footer{
+    height: 230px;
+    width: 100%;
+    background-color: #3a3535;
+}
+ 
+.color-box{
+    width: 100%;
+    background-color: #ff7315;
+    height: 3px;
+    margin-top: 25px;
+}
+
+.color-text{
+    padding-top: 6px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+.footer-content {
+    background-color: #3a3535;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+  
+.logo-footer, .quick-menu, .social-links, .contact-us {
+    flex: 1;
+}
+  
+.logo-footer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 150px; 
+}
+
+.logo-footer img {
+    width: 350px;
+    margin-left: 140px;
+}
+  
+.quick-menu {
+    color: white;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.quick-menu h4 {
+    color: #ff7315;
+}
+.contact-us {
+    color: white;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-us h4{
+    color: #ff7315;
+}
+
+  
+.social-links {
+    color: #ff7315;
+    text-align: right;
+    padding-right: 35px;
+    margin-right: 120px;
+    padding-top: 20px;
+}
+
+.social-links i{ 
+    padding-left: 10px;
+}
