@@ -1,0 +1,270 @@
+/*Library Page Start*/
+/* 
+font-family: 'Dela Gothic One', cursive;
+font-family: 'Josefin Sans', sans-serif;
+*/
+.Jform-control{
+    background-image: url(../assets/libraryPage/searchIcon.png);
+    background-position: right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: #FF7315;
+    border: px50;
+    border-color: #FF7315;
+  }
+  .JlogoImg{
+    height: 50px;
+    width: 80px;
+  }
+
+  .Jbody{
+    
+    overflow-x: hidden;
+
+    background-repeat: no-repeat;
+    background-color: #3A3535;
+    background-size: cover;
+
+  }
+ .JnavB{
+    text-align: center;
+ }
+ .Jhead{
+    width:60%;
+    height:100%;
+    margin-left: 10%;
+    margin-right: auto;
+    padding-top: 100px;
+    background-color: transparent;
+    
+ }
+ .Jlibrary{
+    width: 100%;
+    height: 800px;
+    background-color: #3A3535;
+ }
+ .LheadT{
+    font-family: 'Dela Gothic One', cursive;
+    color: #ffff;
+    font-size: 75px;
+    margin-bottom: 100px;
+ }
+  .LparT{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFF;
+    font-size: 25px;
+    margin-bottom: 100px;
+  }
+  .btnWatchL{
+    background-color: #FF7315;
+    border-color: #FF7315;
+    margin-bottom: 100px;
+  }
+  .btnWatchL:hover{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .btnAddtWL{
+    background-color:  transparent;
+    border-color: transparent;
+    margin-bottom: 100px;
+  }
+  .btnAddtWL:hover{
+    background-color: #FF7315;
+    border-color: #FF7315;
+  }
+  .btnBookmarkL{
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url(../assets/libraryPage/BookmarkSymbolLpluss.png);
+    width: 35px;
+    height: 50px;
+    background-size: 100%;
+    margin-bottom: 100px;
+  }
+  .btnBookmarkL:hover{
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url(../assets/libraryPage/BookmarkSymbolLpluss.png);
+    width: 36px;
+    height: 50px;
+    background-size: 100%
+  }
+  .JrowS{
+    width: 75%;
+    margin-top: 50px;
+  }
+  .Jcol1{
+    width: 10%;
+    background-color: #3A3535;
+  }
+  .Jcol2{
+    width: 80%;
+  }
+  .Jcard{
+    margin-top: 30px;
+  }
+  .JcardIn{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .JcardTH{
+    color: #ffff;
+  }
+  .JcardT{
+    color: #ffff;
+  }
+
+  .JcardImgTop:hover{
+    opacity: 30%;
+    transition: 0.5s;
+  }
+  .Jdrop{
+    background-color: #FF7315;
+    border-color: #FF7315;
+    width: 150px;
+  }
+  .Jdrop:hover{
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .JnavH{
+    height: 100%;
+  }
+
+
+@media(max-width: 1200px){
+  .JdropS{
+    margin: 5px;
+  }
+  .JnavH{
+    height: 5px;
+  }
+.Jrow1{
+    height: 50%;
+  }
+.Jhead{
+  width: 80%;
+  height: 50%;
+}
+.LheadT{
+  font-size: 50px;
+}
+.LparT{
+  width: auto;
+}
+
+}
+nav:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.z-navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.z-navbar-brand img {
+    width: 350px;
+
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+
+.nav-link{
+    color:rgba(255, 255, 255, 0.6) ;
+}
+
+.nav-link:hover{
+    color: #ff7315;
+}
+
+.nav-link.active{
+    border-bottom: 2px solid white;
+    color: #ff7315;
+}
+/* footer */
+footer{
+    height: 230px;
+    width: 100%;
+    background-color: #3a3535;
+}
+ 
+.color-box{
+    width: 100%;
+    background-color: #ff7315;
+    height: 3px;
+    margin-top: 25px;
+}
+
+.color-text{
+    padding-top: 6px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+.footer-content {
+    background-color: #3a3535;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+  
+.logo-footer, .quick-menu, .social-links, .contact-us {
+    flex: 1;
+}
+  
+.logo-footer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 150px; 
+}
+
+.logo-footer img {
+    width: 350px;
+    margin-left: 140px;
+}
+  
+.quick-menu {
+    color: white;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.quick-menu h4 {
+    color: #ff7315;
+}
+.contact-us {
+    color: white;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-us h4{
+    color: #ff7315;
+}
+
+  
+.social-links {
+    color: #ff7315;
+    text-align: right;
+    padding-right: 35px;
+    margin-right: 120px;
+    padding-top: 20px;
+}
+
+.social-links i{ 
+    padding-left: 10px;
+}
+
+/*Library Page End*/
