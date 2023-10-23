@@ -31,7 +31,7 @@ function displayTrendingMovies(movies){
     const trendingContainer = $('#trendingContainer')
     trendingContainer.empty();
 
-    movies.forEach(movie =>{
+    movies.slice(0, 6).forEach(movie =>{
         const card = $(`
             <div class='col-md-4 mb-3'>
             <div class="card">
@@ -122,7 +122,7 @@ function displayMovies(movies){
     const upComingMoviesContainer = $('#upComingMoviesContainer')
     upComingMoviesContainer.empty();
 
-    movies.forEach(movie =>{
+    movies.slice(0, 6).forEach(movie =>{
         const card = $(`
             <div class='col-md-4 mb-3'>
             <div class="card">
