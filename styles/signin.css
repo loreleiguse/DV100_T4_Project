@@ -171,20 +171,76 @@ p {
     font-family: 'Lexend Deca', sans-serif;
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
-    
+
 }
+
 /*=============================================================================*/
 /*Sign In Page*/
 
+/*=============================================================================*/
+/*Nav Bar*/
+nav:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-#inputContainer{
+.z-navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.z-navbar-brand img {
+    width: 350px;
+
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-link:hover {
+    color: #ff7315;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid white;
+    color: #ff7315;
+}
+
+/*=============================================================================*/
+
+
+input {
+    width: 473px;
+    height: 64px;
+    background-color: black;
+    color: white;
+    padding-left: 1vh;
+}
+
+.logo {
+    height: 77px;
+    width: 350px;
+    background-image: url(../Assets/DV_104_Logo_Final-02.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#inputContainer {
     width: 472px;
     height: 64px;
     background-color: rgba(1, 1, 1, 1);
     margin: auto;
 }
 
-#inputBar{
+#inputBar {
     width: 472px;
     height: 4px;
     background-color: #DD922E;
@@ -201,14 +257,14 @@ p {
 #button {
     width: 151px;
     height: 49px;
-    margin:auto;
+    margin: auto;
     border-radius: 0px;
     background-color: #DD922E;
     padding-left: 5vh;
     padding-top: 1.5vh;
 }
 
-#bottomBar{
+#bottomBar {
     width: 100%;
 }
 
@@ -217,25 +273,31 @@ p {
 /*=============================================================================*/
 /*Logo*/
 
-#logo{
+.navbar-brand img {
+    width: 360px;
+}
+
+#logo {
     width: 148px;
     Height: 60px;
     background-image: url(../Assets/Shuffel\ Watch\ Logo.png);
 }
+
 /*=============================================================================*/
 /* Main Logo*/
 
-#mainImage{
+#mainImage {
     height: 169px;
-    width: 414px;
-    background-image: url(../Assets/Shuffle\ Watch\ Logo\ Main.png);
+    width: 384px;
+    background-image: url(../Assets/DV_104_Logo_Final-02.png);
     background-position: center;
     background-size: cover;
 }
-/*=============================================================================*/
-/* Footer */  
 
-#bottomBar{
+/*=============================================================================*/
+/* Footer */
+
+#bottomBar {
     width: 100%;
     height: 76px;
     flex-shrink: 0;
@@ -243,7 +305,7 @@ p {
 
 }
 
-#bottomLine{
+#bottomLine {
     width: 144px;
     height: 4px;
     background-color: #FFFFFF;
@@ -254,25 +316,109 @@ p {
 }
 
 /*=============================================================================*/
-    /*When the Screen Size is smaller than 1200px*/
-    @media (max-width: 1200px) {
-        #mainImage{
-            height: 169px;
-            width: 414px;
-            background-image: url(../Assets/Shuffle\ Watch\ Logo\ Main.png);
-            background-position: center;
-            background-size: cover;
-            margin: auto;
-            margin-top: 10vh;
-            
-        }
+/*When the Screen Size is smaller than 1200px*/
+@media (max-width: 1200px) {
+    #mainImage {
+        height: 169px;
+        width: 414px;
+        background-image: url(../Assets/Shuffle\ Watch\ Logo\ Main.png);
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+        margin-top: 10vh;
 
-        #bottomBar{
-            height: 55px;
-            width: 810px;
-        }
-
-        #inputBar{
-            margin-top: 5.3vh;
-        }
     }
+
+    #bottomBar {
+        height: 55px;
+        width: 810px;
+    }
+
+    #inputBar {
+        margin-top: 5.3vh;
+    }
+}
+
+/*=============================================================================*/
+/*Footer*/
+footer {
+    height: 230px;
+    width: 100%;
+    background-color: #3a3535;
+}
+
+.color-box {
+    width: 100%;
+    background-color: #ff7315;
+    height: 3px;
+    margin-top: 25px;
+}
+
+.color-text {
+    padding-top: 6px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-content {
+    background-color: #3a3535;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-footer,
+.quick-menu,
+.social-links,
+.contact-us {
+    flex: 1;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 150px;
+}
+
+.logo-footer img {
+    width: 350px;
+    margin-left: 140px;
+}
+
+.quick-menu {
+    color: white;
+    padding-top: 24px;
+    text-align: center;
+}
+
+.quick-menu h4 {
+    color: #ff7315;
+}
+
+.contact-us {
+    color: white;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-us h4 {
+    color: #ff7315;
+}
+
+
+.social-links {
+    color: #ff7315;
+    text-align: right;
+    padding-right: 35px;
+    margin-right: 120px;
+    padding-top: 20px;
+}
+
+.social-links i {
+    padding-left: 10px;
+}
