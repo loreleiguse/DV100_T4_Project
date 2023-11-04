@@ -39,6 +39,11 @@ body{
 
 /* Nav */
 
+.navbar-toggler-icon{
+    color: #ff7315;
+    background-color: #ff7315;
+}
+
 nav:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
