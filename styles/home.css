@@ -36,6 +36,10 @@ body{
     color: #ff7315;
 }
 
+.card-title{
+    color: #ff7315;
+}
+
 
 /* Nav */
 
@@ -144,7 +148,6 @@ nav:hover{
 
 .card {
     background-color: #3a3535;
-    margin-bottom: 80px;
     color: white;
     position: relative;
     overflow: hidden;
@@ -167,7 +170,7 @@ nav:hover{
 
 .play-button {
     position: absolute;
-    top: 37%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -247,8 +250,9 @@ footer {
 }
 
 .logo-footer img {
-    width: 100%;
-    max-width: 350px;
+    display: flex;
+    align-items: center;
+    max-width: 225px;
 }
 
 .quick-menu {
@@ -269,13 +273,11 @@ footer {
     color: #ff7315;
 }
 
-.social-links {
-    color: #ff7315;
-    text-align: right;
-}
 
-.social-links i {
-    padding-left: 5px;
+
+.icon{
+    margin-right: 20px;
+    color: #ff7315;
 }
 
 

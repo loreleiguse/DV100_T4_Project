@@ -4,7 +4,7 @@ $(document).ready(function () {
     const settings = {
         async: true,
         crossDomain: true,
-        url: 'https://moviesdatabase.p.rapidapi.com/titles?genre=Action&startYear=2021&endYear=2023',
+        url: 'https://moviesdatabase.p.rapidapi.com/titles?genre=Action&list=most_pop_movies&year=2022&info=base_info',
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
@@ -18,14 +18,16 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (data) {
             console.log(data);
-
+        
             movies = data.results.map(movie => ({
                 id: movie.id,
                 name: movie.originalTitleText.text,
-                date: `${movie.releaseDate.day}-${movie.releaseDate.month}-${movie.releaseDate.year}`,
+                rating: movie.ratingsSummary.aggregateRating,
+                plot: movie.plot.plotText.plainText,
                 image: movie.primaryImage.url,
             }));
-            const selectedMovies = movies.filter((movie, index) => [0, 1, 5, 6].includes(index));
+
+            const selectedMovies = movies.filter((movie, index) => [1, 3, 4, 6].includes(index));
 
             console.log(selectedMovies);
             displayTrendingMovies(selectedMovies);
@@ -49,7 +51,8 @@ $(document).ready(function () {
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">${movie.name}</h5>
-                                <p class="card-date">Date: ${movie.date}</p>
+                                <p class="card-plot"> ${movie.plot}</p>
+                                <p class="card-rating">Ranking: ${movie.rating} <i class="bi bi-star-fill"></i></p>
                                 <div class="mt-auto">
                                     <button class="add-to-watchList" data-id="${movie.id}">Add to WatchList</button>
                                 </div>
