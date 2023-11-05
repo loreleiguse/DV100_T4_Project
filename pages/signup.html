@@ -72,9 +72,13 @@
             </div>
             <div class="col-4 col-xl-4 col-md-4 col-sm-4">
                 <form>
-                    <div class="username mt-4" aria-required="true">
-                        <input class="input" id="username" type="email" placeholder="Username">
+                    <div class="username mt-4" aria-required="true" id="username">
+                        <input class="input" id="username" type="email" placeholder="username">
                         <span id="usernameError" style="color: red;">This username is not recognized</span>
+                    </div>
+
+                    <div class="email mt-4">
+                        <input class="input" id="email" type="email" placeholder="email">
                     </div>
 
                     <div class="password mt-4">
@@ -95,26 +99,9 @@
     <!-- Button -->
     <div class="container">
         <div class="row">
-            <div class="button mt-4" id="button" style="padding-left: 6.5vh;">
-                <p>Sign In</p>
+            <div class="button mt-4" id="button">
+                <p>Sign Up</p>
             </div>
-        </div>
-    </div>
-
-    <!-- Sign Up Redirect -->
-    <div class="container fluid">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <div class="hyperlinkContainer" style="width: 50vh; height: 2vh;">
-                    <a href="signup.html" class="hyperlink" style="text-align: center;">
-                        <p>Don't Have An Account?</p>
-                    </a>
-                </div>
-
-            </div>
-            <div class="col-4"></div>
-
         </div>
     </div>
 
@@ -162,7 +149,7 @@
     integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
     crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="../scripts/signin.js"></script>
+<script src="../scripts/signup.js"></script>
 
 </body>
 
