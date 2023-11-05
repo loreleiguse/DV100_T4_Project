@@ -27,7 +27,7 @@ $(document).ready(function () {
                 image: movie.primaryImage.url,
             }));
 
-            const selectedMovies = movies.filter((movie, index) => [1, 3, 4, 6].includes(index));
+            const selectedMovies = movies.filter((movie, index) => [0, 2, 3, 4].includes(index));
 
             console.log(selectedMovies);
             displayTrendingMovies(selectedMovies);
@@ -120,7 +120,7 @@ $(document).ready(function () {
 const settings = {
     async: true,
     crossDomain: true,
-    url: 'https://moviesdatabase.p.rapidapi.com/titles/x/upcoming',
+    url: 'https://moviesdatabase.p.rapidapi.com/titles/random?startYear=2020&info=base_info&endYear=2023&list=most_pop_movies',
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
@@ -134,14 +134,19 @@ console.log("Request Headers:", settings.headers);
 
 $.ajax(settings).done(function (response) {
     console.log(response);
+    
     const upMovies = response.results.map(upMovie => ({
-        id: upMovie.id,
-        name: upMovie.originalTitleText.text,
-        date: `${upMovie.releaseDate.day}-${upMovie.releaseDate.month}-${upMovie.releaseDate.year}`,
+        movie: upMovie.id,
+        title: upMovie.originalTitleText.text,
+        rank: upMovie.ratingsSummary.aggregateRating,
+        story: upMovie.plot.plotText.plainText,
         image: upMovie.primaryImage.url,
     }));
+
+    const selectedUpMovies = movies.filter((upMovie, index) => [1, 3, 4, 6].includes(index));
+
     console.log(upMovies);
-    displayUpMovies(upMovies);
+    displayUpMovies(selectedUpMovies);
 });
 
 function displayUpMovies(upMovies) {
@@ -152,15 +157,16 @@ function displayUpMovies(upMovies) {
         const card = $(`
         <div class='col-md-3 mb-2'>
         <div class="card h-100">
-            <a href="pages/individual.html?id=${upMovie.id}">
-                <img src="${upMovie.image}" class="card-img-top">
+            <a href="pages/individual.html?id=${upMovie.movie}">
+                <img src="${upMovie.url}" class="card-img-top">
                 <div class="play-button">
                 <i class="bi bi-play-circle"></i>
             </div>
             </a>
             <div class="card-body">
-                <h5 class="card-title">${upMovie.name}</h5>
-                <p class="card-date">Date: ${upMovie.date}</p>
+                <h5 class="card-title">${upMovie.title}</h5>
+                <p class="card-plot"> ${upMovie.story}</p>
+                <p class="card-rating">Ranking: ${upMovie.rank} <i class="bi bi-star-fill"></i></p>
             <div class="mt-auto">
                     <button class="add-to-watchList" data-id="${upMovie.id}">Add to WatchList</button>
                 </div>
