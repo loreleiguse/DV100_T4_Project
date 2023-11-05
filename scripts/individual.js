@@ -1,17 +1,16 @@
 $(document).ready(function() {
+    
+    const addwatchlist = () => {
+
+        let response = JSON.stringify(subOrder);
+        localStorage.setItem("sub", response);
+        window.location.href = '../pages/watchlist.html';
+    };
 
     getMovieDataById('tt10676048');
-
-    addwatchlist = () => {
-        let response = JSON.stringify(subOrder)
-        localStorage.setItem("sub", response)
-        window.location.href = '../pages/watchlist.html'
-    }
-
 });
 
 function getMovieDataById(letter) {
-
     const settings = {
         async: true,
         crossDomain: true,
@@ -22,8 +21,8 @@ function getMovieDataById(letter) {
             'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
         }
     };
-    
-    $.ajax(settings).done(function (response) {
+
+    $.ajax(settings).done(function(response) {
 
         console.log(response);
 
@@ -36,19 +35,15 @@ function getMovieDataById(letter) {
         }));
 
         showSeries(series);
-
     });
-
 }
 
 function showSeries(series) {
-
     const seriesContainer = $('#seriesContainer');
 
     seriesContainer.empty();
 
     series.forEach(movie => {
-
         const card = $(`
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
@@ -58,8 +53,7 @@ function showSeries(series) {
                 </ul>
             </div>`);
 
+        // Append the card inside the forEach loop
+        seriesContainer.append(card);
     });
-
-    seriesContainer.append(card);
-
 }

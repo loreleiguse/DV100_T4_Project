@@ -8,7 +8,7 @@ body{
 header{
     width: 100%;
     height: auto;
-    background-image: url("../assets/barbie.jpeg");
+    background-image: url("../assets/header.jpg");
     background-position: center;
     background-size: cover;
     color: white;
@@ -21,6 +21,11 @@ header{
 }
 
 /* Nav */
+
+.navbar-toggler-icon{
+    color: #ff7315;
+    background-color: #ff7315;
+}
 
 nav:hover{
     background-color: rgba(0, 0, 0, 0.5);
@@ -37,11 +42,10 @@ nav:hover{
 
 .nav {
     list-style: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     align-items: center;
 }
-
 
 .nav-link{
     color:rgba(255, 255, 255, 0.6) ;
@@ -150,81 +154,68 @@ nav:hover{
     border-radius: 0px;
 }
 
-/* Footer */
+/* footer */
 
-footer{
-    height: 230px;
-    width: 100%;
+footer {
     background-color: #3a3535;
 }
- 
-.color-box{
-    width: 100%;
+
+.color-box {
     background-color: #ff7315;
     height: 3px;
     margin-top: 25px;
 }
 
-.color-text{
-    padding-top: 6px;
+.color-text {
     color: white;
     text-align: center;
     padding-top: 10px;
 }
+
 .footer-content {
-    background-color: #3a3535;
-    width: 100%;
+    padding: 0 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding-top: 50px;
 }
-  
+
 .logo-footer, .quick-menu, .social-links, .contact-us {
     flex: 1;
+    margin: 10px;
 }
-  
+
 .logo-footer {
     display: flex;
     align-items: center;
-    margin-right: 20px;
-    margin-left: 150px; 
 }
 
 .logo-footer img {
-    width: 350px;
-    margin-left: 140px;
+    display: flex;
+    align-items: center;
+    max-width: 225px;
 }
-  
+
 .quick-menu {
     color: white;
-    padding-top: 24px;
     text-align: center;
 }
 
-.quick-menu h4 {
-    color: #ff7315;
+.quick-menu h4, a{
+    color: white;
 }
+
 .contact-us {
     color: white;
-    padding-top: 40px;
-    margin-bottom: 40px;
     text-align: center;
 }
 
-.contact-us h4{
+.contact-us h4 {
     color: #ff7315;
 }
 
-  
-.social-links {
+.icon{
+    margin-right: 20px;
     color: #ff7315;
-    text-align: right;
-    padding-right: 35px;
-    margin-right: 120px;
-    padding-top: 20px;
-}
-
-.social-links i{ 
-    padding-left: 10px;
 }
