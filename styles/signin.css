@@ -217,7 +217,7 @@ nav:hover {
 
 
 input {
-    width: 473px;
+    width: 415px;
     height: 64px;
     background-color: black;
     color: white;
@@ -228,23 +228,11 @@ input {
     height: 77px;
     width: 350px;
     background-image: url(../Assets/DV_104_Logo_Final-02.png);
-    background-position: center;
+
     background-size: cover;
 }
 
-#inputContainer {
-    width: 472px;
-    height: 64px;
-    background-color: rgba(1, 1, 1, 1);
-    margin: auto;
-}
 
-#inputBar {
-    width: 472px;
-    height: 4px;
-    background-color: #DD922E;
-    margin-top: 6.5vh;
-}
 
 #extra {
     width: 200px;
@@ -263,6 +251,10 @@ input {
     padding-top: 1.5vh;
 }
 
+#button:hover {
+    cursor: pointer;
+}
+
 #bottomBar {
     width: 100%;
 }
@@ -279,14 +271,14 @@ input {
 #logo {
     width: 148px;
     Height: 60px;
-    background-image: url(../Assets/Shuffel\ Watch\ Logo.png);
+    background-image: url(../Assets/DV_104_Logo_Final-02.png);
 }
 
 /*=============================================================================*/
 /* Main Logo*/
 
 #mainImage {
-    height: 169px;
+    height: 80px;
     width: 384px;
     background-image: url(../Assets/DV_104_Logo_Final-02.png);
     background-position: center;
@@ -318,12 +310,12 @@ input {
 /*When the Screen Size is smaller than 1200px*/
 @media (max-width: 1200px) {
     #mainImage {
-        height: 169px;
-        width: 414px;
-        background-image: url(../Assets/Shuffle\ Watch\ Logo\ Main.png);
+        height: 77px;
+        width: 380px;
+        background-image: url(../Assets/DV_104_Logo_Final-02.png);
         background-position: center;
         background-size: cover;
-        margin: auto;
+        margin-right: 10vh;
         margin-top: 10vh;
 
     }
@@ -336,6 +328,17 @@ input {
     #inputBar {
         margin-top: 5.3vh;
     }
+
+    input {
+
+        width: 356px;
+        height: 64px;
+        background-color: black;
+        color: white;
+        padding-left: 1vh;
+
+    }
+
 }
 
 /*=============================================================================*/
@@ -359,6 +362,7 @@ footer {
     text-align: center;
     padding-top: 10px;
 }
+
 
 .footer-content {
     background-color: #3a3535;
