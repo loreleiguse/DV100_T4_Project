@@ -116,23 +116,24 @@ $(document).ready(function () {
 
             watchList.forEach(movie => {
                 const watchListCard = $(`
-                    <div class='col-md-3 mb-2'>
-                        <div class="card h-100">
-                            <a href="pages/individual.html?id=${movie.id}">
-                                <img src="${movie.image}" class="card-img-top">
-                                <div class="play-button">
-                                    <i class="bi bi-play-circle"></i>
-                                </div>
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">${movie.name}</h5>
-                                <p class="card-date">Date: ${movie.date}</p>
-                                <div class="mt-auto">
-                                    <button class="add-to-watchList" data-id="${movie.id}">Add to WatchList</button>
-                                </div>
-                            </div>
+                <div class='col-md-3 mb-2'>
+                <div class="card h-100">
+                    <a href="pages/individual.html?id=${movie.id}">
+                        <img src="${movie.image}" class="card-img-top">
+                        <div class="play-button">
+                            <i class="bi bi-play-circle"></i>
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">${movie.name}</h5>
+                        <p class="card-plot"> ${movie.plot}</p>
+                        <p class="card-rating">Ranting: ${movie.rating} <i class="bi bi-star-fill"></i></p>
+                        <div class="mt-auto">
+                            <button class="add-to-watchList" data-id="${movie.id}">Add to WatchList</button>
                         </div>
                     </div>
+                </div>
+            </div>
                 `);
                 watchListContainer.append(watchListCard);
             });
@@ -141,67 +142,122 @@ $(document).ready(function () {
         displayWatchList();
     });
 
-let UpMovies = [];
-const settings = {
-    async: true,
-    crossDomain: true,
-    url: 'https://moviesdatabase.p.rapidapi.com/titles/random?startYear=2020&info=base_info&endYear=2023&list=most_pop_movies',
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
-        'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+// Declare upMovies in a higher scope
+let upMovies = [];
+
+$(document).ready(function () {
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://moviesdatabase.p.rapidapi.com/titles/random?startYear=2020&info=base_info&endYear=2023&list=most_pop_movies',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
+            'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+        }
+    };
+
+    console.log("Request URL:", settings.url);
+    console.log("Request Headers:", settings.headers);
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+
+        upMovies = response.results.map(upMovie => ({
+            movie: upMovie.id,
+            title: upMovie.originalTitleText.text,
+            rank: upMovie.ratingsSummary.aggregateRating,
+            story: upMovie.plot.plotText.plainText,
+            image: upMovie.primaryImage.url,
+        }));
+
+        const selectedUpMovies = upMovies.filter((upMovie, index) => [0, 1, 6, 9].includes(index));
+
+        console.log(selectedUpMovies);
+        displayUpMovies(selectedUpMovies);
+    });
+
+    function displayUpMovies(upMovies) {
+        const upComingMoviesContainer = $('#upComingMoviesContainer');
+        upComingMoviesContainer.empty();
+
+        upMovies.forEach(upMovie => {
+            const card = $(`
+                <div class='col-md-3 mb-2'>
+                    <div class="card h-100">
+                        <a href="pages/individual.html?id=${upMovie.movie}">
+                            <img src="${upMovie.image}" class="card-img-top">
+                            <div class="play-button">
+                                <i class="bi bi-play-circle"></i>
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">${upMovie.title}</h5>
+                            <p class="card-plot"> ${upMovie.story}</p>
+                            <p class="card-rating">Rating: ${upMovie.rank} <i class="bi bi-star-fill"></i></p>
+                            <div class="mt-auto">
+                                <button class="add-to-watchList-upcoming" data-id="${upMovie.movie}">Add to WatchList</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            card.click(function () {
+                // Handle card click event here
+            });
+
+            upComingMoviesContainer.append(card);
+        });
     }
-};
 
+    // Event listener to add upcoming movies to the watchlist
+    $(document).on('click', '.add-to-watchList-upcoming', function () {
+        const movieId = $(this).data('id');
 
-console.log("Request URL:", settings.url);
-console.log("Request Headers:", settings.headers);
+        let watchListUpcoming = JSON.parse(localStorage.getItem('watchListUpcoming')) || [];
 
-$.ajax(settings).done(function (response) {
-    console.log(response);
-    
-    const upMovies = response.results.map(upMovie => ({
-        movie: upMovie.id,
-        title: upMovie.originalTitleText.text,
-        rank: upMovie.ratingsSummary.aggregateRating,
-        story: upMovie.plot.plotText.plainText,
-        image: upMovie.primaryImage.url,
-    }));
+        const selectedUpcomingMovie = upMovies.find(upMovie => upMovie.movie === movieId);
+        if (selectedUpcomingMovie && !watchListUpcoming.some(item => item.movie === movieId)) {
+            watchListUpcoming.push(selectedUpcomingMovie);
+            localStorage.setItem('watchListUpcoming', JSON.stringify(watchListUpcoming));
+            displayWatchListUpcoming();
+        }
+    });
 
-    const selectedUpMovies = movies.filter((upMovie, index) => [1, 3, 4, 6].includes(index));
+    // Display the watchlist for upcoming movies
+    function displayWatchListUpcoming() {
+        const watchListContainerUpcoming = $('#watchListContainerUpcoming');
+        watchListContainerUpcoming.empty();
 
-    console.log(upMovies);
-    displayUpMovies(selectedUpMovies);
+        const watchListUpcoming = JSON.parse(localStorage.getItem('watchListUpcoming')) || [];
+
+        watchListUpcoming.forEach(upcomingMovie => {
+            const watchListCard = $(`
+                <div class='col-md-3 mb-2'>
+                    <div class="card h-100">
+                        <a href="pages/individual.html?id=${upcomingMovie.movie}">
+                            <img src="${upcomingMovie.image}" class="card-img-top">
+                            <div class="play-button">
+                                <i class="bi bi-play-circle"></i>
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">${upcomingMovie.title}</h5>
+                            <p class="card-plot"> ${upcomingMovie.story}</p>
+                            <p class="card-rating">Rating: ${upcomingMovie.rank} <i class="bi bi-star-fill"></i></p>
+                            <div class="mt-auto">
+                                <button class="add-to-watchList-upcoming" data-id="${upcomingMovie.movie}">Add to WatchList</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+            watchListContainerUpcoming.append(watchListCard);
+        });
+    }
+
+    displayWatchListUpcoming();
 });
 
-function displayUpMovies(upMovies) {
-    const upComingMoviesContainer = $('#upComingMoviesContainer');
-    upComingMoviesContainer.empty();
 
-    upMovies.slice(0, 6).forEach(upMovie => {
-        const card = $(`
-        <div class='col-md-3 mb-2'>
-        <div class="card h-100">
-            <a href="pages/individual.html?id=${upMovie.movie}">
-                <img src="${upMovie.url}" class="card-img-top">
-                <div class="play-button">
-                <i class="bi bi-play-circle"></i>
-            </div>
-            </a>
-            <div class="card-body">
-                <h5 class="card-title">${upMovie.title}</h5>
-                <p class="card-plot"> ${upMovie.story}</p>
-                <p class="card-rating">Ranting: ${upMovie.rank} <i class="bi bi-star-fill"></i></p>
-            <div class="mt-auto">
-                    <button class="add-to-watchList" data-id="${upMovie.id}">Add to WatchList</button>
-                </div>
-            </div>
-        </div>
-    </div>`);
-
-        card.click(function () {
-        });
-
-        upComingMoviesContainer.append(card);
-    });
-}

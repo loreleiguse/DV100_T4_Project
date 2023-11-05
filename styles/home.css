@@ -87,7 +87,7 @@ nav:hover{
 /* Carousel */
 
 .z-background{
-    padding-top: 50px;
+    margin-top: 50px;
     background-color: #ff7315;
 }
 
@@ -154,6 +154,13 @@ nav:hover{
     transition: transform 0.2s;
 }
 
+.card-content {
+    height: 300px; /* You can adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -200,6 +207,28 @@ nav:hover{
 }
 
 .add-to-watchList:hover {
+    background-color: white;
+    color: #ff7315;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.add-to-watchList-upcoming{
+    background-color: #ff7315;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.add-to-watchList-upcoming:hover{
     background-color: white;
     color: #ff7315;
     border: none;
