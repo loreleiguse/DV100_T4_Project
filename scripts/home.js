@@ -1,3 +1,28 @@
+let storedUsername = localStorage.getItem("username");
+
+
+if (storedUsername) {
+  document.getElementById("usernameDisplay").textContent = storedUsername;
+}
+
+
+$(document).ready(function () {
+  $('#button').click(function () {
+    $('input').each(function () {
+      var id = $(this).attr('id');
+      var value = $(this).val();
+      localStorage.setItem(id, value);
+      console.log('Stored ' + value + ' for ' + id);
+
+    
+      if (id === "username") {
+        document.getElementById("usernameDisplay").textContent = value;
+      }
+    });
+  });
+});
+
+  
 let movies = [];
 
 $(document).ready(function () {
@@ -52,7 +77,7 @@ $(document).ready(function () {
                             <div class="card-body">
                                 <h5 class="card-title">${movie.name}</h5>
                                 <p class="card-plot"> ${movie.plot}</p>
-                                <p class="card-rating">Ranking: ${movie.rating} <i class="bi bi-star-fill"></i></p>
+                                <p class="card-rating">Ranting: ${movie.rating} <i class="bi bi-star-fill"></i></p>
                                 <div class="mt-auto">
                                     <button class="add-to-watchList" data-id="${movie.id}">Add to WatchList</button>
                                 </div>
@@ -62,7 +87,6 @@ $(document).ready(function () {
                 `);
 
                 card.click(function () {
-                    // Event handler for clicking on a movie card
                 });
 
                 row.append(card);
@@ -80,7 +104,7 @@ $(document).ready(function () {
             if (selectedMovie && !watchList.some(item => item.id === movieId)) {
                 watchList.push(selectedMovie);
                 localStorage.setItem('watchList', JSON.stringify(watchList));
-                displayWatchList(); // Update the display after adding to the watchlist
+                displayWatchList();
             }
         });
 
@@ -117,6 +141,7 @@ $(document).ready(function () {
         displayWatchList();
     });
 
+let UpMovies = [];
 const settings = {
     async: true,
     crossDomain: true,
@@ -166,7 +191,7 @@ function displayUpMovies(upMovies) {
             <div class="card-body">
                 <h5 class="card-title">${upMovie.title}</h5>
                 <p class="card-plot"> ${upMovie.story}</p>
-                <p class="card-rating">Ranking: ${upMovie.rank} <i class="bi bi-star-fill"></i></p>
+                <p class="card-rating">Ranting: ${upMovie.rank} <i class="bi bi-star-fill"></i></p>
             <div class="mt-auto">
                     <button class="add-to-watchList" data-id="${upMovie.id}">Add to WatchList</button>
                 </div>
