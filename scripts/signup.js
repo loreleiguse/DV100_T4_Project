@@ -1,23 +1,20 @@
-let username = document.getElementById("username");
+let username = document.getElementById("username").value;
 let storedUsername = localStorage.getItem("username");
-let usernameError = document.getElementById('usernameError')
+
 /* Document ready */
 $(document).ready(function () {
 
     /* When Sign In Button Is Clicked */
     $('#button').click(function () {
-
-        if (username.value === storedUsername) {
-            
-
-        } else {
-            usernameError.innerHTML = 'Username Not Valid';
-        }
-
+        $('input').each(function () {
+            var id = $(this).attr('id');
+            var value = $(this).val();
+            localStorage.setItem(id, value);
+            console.log('Stored ' + value + ' for ' + id)
+        })
     })
+
 })
-
-
 
 
 //clear previous error message
