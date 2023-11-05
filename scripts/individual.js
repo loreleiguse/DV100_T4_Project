@@ -1,32 +1,41 @@
 $(document).ready(function() {
 
-    getMovieDataById('tt1517268');
+    getMovieDataById('tt10676048');
+
+    addwatchlist = () => {
+        let response = JSON.stringify(subOrder)
+        localStorage.setItem("sub", response)
+        window.location.href = '../pages/watchlist.html'
+    }
 
 });
 
 function getMovieDataById(letter) {
 
-    const apiUrl = `https://moviesdatabase.p.rapidapi.com/titles/series/${letter}`;
-
-    $.ajax({
-        url: apiUrl,
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: `https://moviesdatabase.p.rapidapi.com/titles/${letter}`,
         method: 'GET',
-        dataType: 'json',
-        success: function(data) {
-
-            const series = data.info.map(movie => ({
-                id: movie.,
-                name: movie.,
-                image: movie.,
-            }));
-              
-            showSeries(series);
-
-        },
-
-        error: function(error) {
-          console.error('Error:', error);
+        headers: {
+            'X-RapidAPI-Key': 'e7c30e8374mshfdf38164a77f9a3p1d3ea8jsn580bf1a6a5d4',
+            'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
         }
+    };
+    
+    $.ajax(settings).done(function (response) {
+
+        console.log(response);
+
+        const series = response.results.map(movie => ({
+            id: movie.id,
+            title: movie.originalTitleText.text,
+            cast: movie.primaryImage.plainText,
+            year: movie.releaseYear.year,
+            image: movie.primaryImage.url,
+        }));
+
+        showSeries(series);
 
     });
 
@@ -34,14 +43,23 @@ function getMovieDataById(letter) {
 
 function showSeries(series) {
 
-    const seriesContainer = $('seriesContainer');
+    const seriesContainer = $('#seriesContainer');
 
     seriesContainer.empty();
 
     series.forEach(movie => {
 
-        const card = $(``)
+        const card = $(`
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Title:</strong>${movie.title}</li>
+                    <li class="list-group-item"><strong>Cast:</strong>${movie.cast}</li>
+                    <li class="list-group-item"><strong>Year:</strong>${movie.year}</li>
+                </ul>
+            </div>`);
 
     });
+
+    seriesContainer.append(card);
 
 }
