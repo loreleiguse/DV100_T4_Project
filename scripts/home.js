@@ -142,7 +142,6 @@ $(document).ready(function () {
         displayWatchList();
     });
 
-// Declare upMovies in a higher scope
 let upMovies = [];
 
 $(document).ready(function () {
@@ -204,14 +203,13 @@ $(document).ready(function () {
             `);
 
             card.click(function () {
-                // Handle card click event here
             });
 
             upComingMoviesContainer.append(card);
         });
     }
 
-    // Event listener to add upcoming movies to the watchlist
+
     $(document).on('click', '.add-to-watchList-upcoming', function () {
         const movieId = $(this).data('id');
 
@@ -225,7 +223,7 @@ $(document).ready(function () {
         }
     });
 
-    // Display the watchlist for upcoming movies
+
     function displayWatchListUpcoming() {
         const watchListContainerUpcoming = $('#watchListContainerUpcoming');
         watchListContainerUpcoming.empty();
