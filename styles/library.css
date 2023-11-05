@@ -3,6 +3,8 @@
 font-family: 'Dela Gothic One', cursive;
 font-family: 'Josefin Sans', sans-serif;
 */
+
+
 .Jform-control{
     background-image: url(../assets/libraryPage/searchIcon.png);
     background-position: right;
@@ -20,7 +22,7 @@ font-family: 'Josefin Sans', sans-serif;
   .Jbody{
     
     overflow-x: hidden;
-
+    
     background-repeat: no-repeat;
     background-color: #3A3535;
     background-size: cover;
@@ -91,7 +93,7 @@ font-family: 'Josefin Sans', sans-serif;
     background-size: 100%
   }
   .JrowS{
-    width: 75%;
+    width: 100%;
     margin-top: 50px;
   }
   .Jcol1{

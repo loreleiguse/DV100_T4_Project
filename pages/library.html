@@ -59,7 +59,7 @@
                 <h6 class="LparT" style="padding-top: 50px;">Movie Library</h6>
                 <div class="row JrowS">
                     <div class="dropdown col-12 col-md-4 JdropS">
-                        <button class="btn btn-secondary" type="button"onclick = "getApiData();" >
+                        <button class="btn btn-secondary" type="button" onclick = "getApiData();emptyCard();" >
                         All Shows
                         </button>
                         <ul class="dropdown-menu">
@@ -69,7 +69,7 @@
                         </ul>
                     </div>
                     <div class="dropdown col-12 col-md-4 JdropS">
-                        <button class="btn btn-secondary" type="button" onclick = "yearSortLastFive();">
+                        <button class="btn btn-secondary" type="button"  onclick = "yearSortLastFive(); emptyCard();">
                         Older Than 5 Years
                         </button>
                         <ul class="dropdown-menu">
@@ -79,8 +79,8 @@
                         </ul>
                     </div>
                     <div class="dropdown col-12 col-md-4 JdropS">
-                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button">
-                        Younger Than 5 Years
+                        <button class="btn btn-secondary" type="button" onclick = "animation(); emptyCard();">
+                        Animation
                         </button>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
