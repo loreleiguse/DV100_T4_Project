@@ -1,3 +1,4 @@
+<!-- Benjamin McCusker 231186 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,34 +16,31 @@
 
 <body style="background-color: #434142;">
 
-    <!-- Nav Bar -->
-    <nav class="navbar">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="row">
-                <ul class="nav">
-                    <li>
-                        <div class="z-navbar-brand"><a href="#">
-                                <div class=logo></div>
-                            </a></div>
-                    </li>
-                    <li class="z-nav-item">
-                        <a class="nav-link" href="/index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/library.html">LIBRARY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/watchlist.html">WATCH LIST</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/pages/signin.html"><i
-                                class="bi bi-person-circle" style="margin-right: 5px;"></i>SIGN IN</a>
-                    </li>
-                </ul>
-            </div>
-
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <div class="z-navbar-brand"><a href="#"> <img src="../Assets/DV_104_Logo_Final-02.png"></a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: #ff7315;" aria-current="page" href="/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/library.html">LIBRARY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/watchlist.html">WATCH LIST</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/signin.html"><i class="bi bi-person-circle" style="margin-right: 5px;"></i>SIGN IN</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+  </nav>
 
 
     <!-- Main Logo -->
@@ -64,13 +62,13 @@
         </div>
     </div>
 
-
+<!-- Input Areas -->
     <div class="container fluid">
         <div class="row">
-            <div class="col-4 col-xl-4 col-md-4 col-sm-4">
+            <div class="col-4 col-xl-4 col-md-4 col-sm-12">
 
             </div>
-            <div class="col-4 col-xl-4 col-md-4 col-sm-4">
+            <div class="col-4 col-xl-4 col-md-4 col-sm-12">
                 <form>
                     <div class="username mt-4" aria-required="true">
                         <input class="input" id="username" type="email" placeholder="Username">
@@ -82,7 +80,10 @@
                     </div>
                 </form>
             </div>
-            <div class="col-4 col-xl-4 col-md-4 col-sm-4">
+            <div class="col-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="row">
+                    
+                </div>
 
             </div>
         </div>
@@ -105,10 +106,10 @@
     <div class="container fluid">
         <div class="row">
             <div class="col-4"></div>
-            <div class="col-4">
-                <div class="hyperlinkContainer" style="width: 50vh; height: 2vh;">
+            <div class="col-xl-4 col-sm-12">
+                <div class="hyperlinkContainer" style=" height: 2vh;">
                     <a href="signup.html" class="hyperlink" style="text-align: center;">
-                        <p>Don't Have An Account?</p>
+                        Don't Have An Account?  
                     </a>
                 </div>
 
@@ -124,35 +125,53 @@
 
 
 <!-- Footer -->
-<footer>
-    <div class="footer-content mt-4">
-        <div class="logo-footer">
-            <img src="./Assets/DV_104_Logo_Final-02.png" alt="" href="/index.html">
+<footer class="bg-dark text-white mt-4 ">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Quick Menu -->
+        <div class="col-md-4">
+          <div class="footer-content">
+            <div class="logo-footer">
+              <img class="img-fluid" src="../Assets/DV_104_Logo_Final-02.png" alt="" href="/index.html">
+            </div>
+            <div class="quick-menu">
+              <h4>QUICK MENU</h4>
+              <h6><a href="/index.html">HOME</a></h6>
+              <h6><a href="/pages/library.html">LIBRARY</a></h6>
+              <h6><a href="/pages/watchlist.html">WATCH LIST</a></h6>
+            </div>
+          </div>
         </div>
-        <div class="quick-menu">
-            <h4>QUICK MENU</h4>
-            <h6 href="/index.html">HOME</h6>
-            <h6>LIBRARY</h6>
-            <h6>WATCH LIST</h6>
-        </div>
-
-        <div class="contact-us">
-            <h4>CONTACT US</h4>
+  
+        <!-- Contact Information -->
+        <div class="col-md-3">
+          <div class="footer-content">
+            <div class="footer-contact">
+              <h4>CONTACT US :</h4>
+            </div>
             <h6>+27 98 678 483</h6>
             <h6>Info@shufflewatch.co.za</h6>
+          </div>
         </div>
-        <div class="social-links">
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-tiktok"></i>
+  
+        <!-- Social Links -->
+        <div class="col-md-4">
+          <div class="footer-content">
+            <h4>SOCIAL LINKS :</h4>
+            <div class="icon">
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-tiktok"></i>
+            </div>
+            
+          </div>
         </div>
+      </div>
     </div>
     <div class="color-box">
-        <div class="color-text">
-            <p>© 2023 SHUFFLEWATCH. Inc. All rights reserved.</p>
-        </div>
+      <div class="color-text"><p>© 2023 SHUFFLEWATCH. Inc. All rights reserved.</p></div>
     </div>
-</footer>
+  </footer>
 
 <!-- Javascript -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

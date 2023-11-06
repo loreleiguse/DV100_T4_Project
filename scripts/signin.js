@@ -1,3 +1,4 @@
+//Benjamin McCusker 231186
 let username = document.getElementById("username");
 let storedUsername = localStorage.getItem("username");
 let usernameError = document.getElementById('usernameError')

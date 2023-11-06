@@ -1,3 +1,4 @@
+//Benjamin McCusker 231186
 let username = document.getElementById("username").value;
 let storedUsername = localStorage.getItem("username");
 
