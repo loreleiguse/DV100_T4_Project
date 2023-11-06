@@ -122,3 +122,72 @@ h1 {
             font-size: 16px;
             color: white;
         }
+
+
+
+
+       /* footer */
+
+footer {
+    background-color: #3a3535;
+}
+
+.color-box {
+    background-color: #ff7315;
+    height: 3px;
+    margin-top: 25px;
+}
+
+.color-text {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-content {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.logo-footer, .quick-menu, .social-links, .contact-us {
+    flex: 1;
+    margin: 10px;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+.logo-footer img {
+    display: flex;
+    align-items: center;
+    max-width: 225px;
+}
+
+.quick-menu {
+    color: white;
+    text-align: center;
+}
+
+.quick-menu h4, a{
+    color: white;
+}
+
+.contact-us {
+    color: white;
+    text-align: center;
+}
+
+.contact-us h4 {
+    color: #ff7315;
+}
+
+.icon{
+    margin-right: 20px;
+    color: #ff7315;
+}
