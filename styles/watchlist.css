@@ -88,6 +88,17 @@ h1 {
         
         /* navigation */
 
+        .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 350px;
+
+}
+
+
         .nav-link {
             font-family: 'Lexend Deca', sans-serif;
             color:white;
