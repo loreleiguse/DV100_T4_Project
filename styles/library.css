@@ -14,10 +14,7 @@ font-family: 'Josefin Sans', sans-serif;
     border: px50;
     border-color: #FF7315;
   }
-  .JlogoImg{
-    height: 50px;
-    width: 80px;
-  }
+
 
   .Jbody{
     
@@ -32,7 +29,7 @@ font-family: 'Josefin Sans', sans-serif;
     text-align: center;
  }
  .Jhead{
-    width:60%;
+    width:auto;
     height:100%;
     margin-left: 10%;
     margin-right: auto;

@@ -1,3 +1,4 @@
+//Benjamin McCusker 231186
 let username = document.getElementById("username").value;
 let storedUsername = localStorage.getItem("username");
 
@@ -11,6 +12,7 @@ $(document).ready(function () {
             var value = $(this).val();
             localStorage.setItem(id, value);
             console.log('Stored ' + value + ' for ' + id)
+            window.location.replace('signin.html')
         })
     })
 

@@ -1,3 +1,4 @@
+/* Benjamin McCusker 231186 */
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Rajdhani:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&family=Rajdhani:wght@300&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
@@ -111,7 +112,11 @@ p {
             margin-top: 5.3vh;
         }
 
-
+        .hyperlinkContainer{
+            width: 200px;
+            margin-left: 12vh;
+            margin-top: 4vh;
+        }
     }
 /*=============================================================================*/
 /* When Screen size is smaller than 360px (phone size)*/
@@ -177,8 +182,14 @@ p {
 /*Sign In Page*/
 
 /*=============================================================================*/
-/*Nav Bar*/
-nav:hover {
+/* Nav */
+
+.navbar-toggler-icon{
+    color: #ff7315;
+    background-color: #ff7315;
+}
+
+nav:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -194,24 +205,25 @@ nav:hover {
 
 .nav {
     list-style: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     align-items: center;
 }
 
 
-.nav-link {
-    color: rgba(255, 255, 255, 0.6);
+.nav-link{
+    color:rgba(255, 255, 255, 0.6) ;
 }
 
-.nav-link:hover {
+.nav-link:hover{
     color: #ff7315;
 }
 
-.nav-link.active {
+.nav-link.active{
     border-bottom: 2px solid white;
     color: #ff7315;
 }
+
 
 /*=============================================================================*/
 
@@ -283,28 +295,9 @@ input {
     background-image: url(../Assets/DV_104_Logo_Final-02.png);
     background-position: center;
     background-size: cover;
+    margin-top: 20vh;
 }
 
-/*=============================================================================*/
-/* Footer */
-
-#bottomBar {
-    width: 100%;
-    height: 76px;
-    flex-shrink: 0;
-    background-color: #DD922E;
-
-}
-
-#bottomLine {
-    width: 144px;
-    height: 4px;
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    margin: auto;
-    margin-top: 4vh;
-    visibility: hidden;
-}
 
 /*=============================================================================*/
 /*When the Screen Size is smaller than 1200px*/
@@ -317,6 +310,7 @@ input {
         background-size: cover;
         margin-right: 10vh;
         margin-top: 10vh;
+        visibility: hidden;
 
     }
 
@@ -331,81 +325,74 @@ input {
 
     input {
 
-        width: 356px;
+        width: 200px;
         height: 64px;
         background-color: black;
         color: white;
         padding-left: 1vh;
+        align-items: center;
 
     }
+
+
 
 }
 
 /*=============================================================================*/
-/*Footer*/
+/* footer */
+
 footer {
-    height: 230px;
-    width: 100%;
     background-color: #3a3535;
 }
 
 .color-box {
-    width: 100%;
     background-color: #ff7315;
     height: 3px;
     margin-top: 25px;
 }
 
 .color-text {
-    padding-top: 6px;
     color: white;
     text-align: center;
     padding-top: 10px;
 }
 
-
 .footer-content {
-    background-color: #3a3535;
-    width: 100%;
+    padding: 0 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding-top: 50px;
 }
 
-.logo-footer,
-.quick-menu,
-.social-links,
-.contact-us {
+.logo-footer, .quick-menu, .social-links, .contact-us {
     flex: 1;
+    margin: 10px;
 }
 
 .logo-footer {
     display: flex;
     align-items: center;
-    margin-right: 20px;
-    margin-left: 150px;
 }
 
 .logo-footer img {
-    width: 350px;
-    margin-left: 140px;
+    display: flex;
+    align-items: center;
+    max-width: 225px;
 }
 
 .quick-menu {
     color: white;
-    padding-top: 24px;
     text-align: center;
 }
 
-.quick-menu h4 {
-    color: #ff7315;
+.quick-menu h4, a{
+    color: white;
 }
 
 .contact-us {
     color: white;
-    padding-top: 40px;
-    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -414,14 +401,8 @@ footer {
 }
 
 
-.social-links {
-    color: #ff7315;
-    text-align: right;
-    padding-right: 35px;
-    margin-right: 120px;
-    padding-top: 20px;
-}
 
-.social-links i {
-    padding-left: 10px;
+.icon{
+    margin-right: 20px;
+    color: #ff7315;
 }
