@@ -16,25 +16,32 @@
 <body class="Jbody">
     
     <!-- Nav Bar -->
-    <nav class="navbar fixed-top">
-        <div class="container d-flex justify-content-between align-items-center">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
             <div class="z-navbar-brand"><a href="#"> <img src="../Assets/DV_104_Logo_Final-02.png"></a></div>
-            <ul class="nav">
-                <li class="z-nav-item">
-                    <a class="nav-link" href="/index.html">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/pages/library.html">LIBRARY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/watchlist.html">WATCH LIST</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/signin.html"><i class="bi bi-person-circle" style="margin-right: 5px;"></i>SIGN IN</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: #ff7315;" aria-current="page" href="../pages/library.html">LIBRARY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/watchlist.html">WATCH LIST</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/signin.html"><i class="bi bi-person-circle" style="margin-right: 5px;"></i>
+                          <span id="usernameDisplay">SIGN IN</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </nav>
+      </nav>
         <style id="headerImageId">
             /* .Jbody{
                 background-image: url('https://m.media-amazon.com/images/M/MV5BMDliOTIzNmUtOTllOC00NDU3LWFiNjYtMGM0NDc1YTMxNjYxXkEyXkFqcGdeQXVyNTM3NzExMDQ@._V1_.jpg');
@@ -59,8 +66,8 @@
                 <h6 class="LparT" style="padding-top: 50px;">Movie Library</h6>
                 <div class="row JrowS">
                     <div class="dropdown col-12 col-md-4 JdropS">
-                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Status
+                        <button class="btn btn-secondary" type="button" onclick = "getApiData();emptyCard();" >
+                        All Shows
                         </button>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -69,8 +76,8 @@
                         </ul>
                     </div>
                     <div class="dropdown col-12 col-md-4 JdropS">
-                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Year
+                        <button class="btn btn-secondary" type="button"  onclick = "yearSortLastFive(); emptyCard();">
+                        Released After 2015
                         </button>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -79,8 +86,8 @@
                         </ul>
                     </div>
                     <div class="dropdown col-12 col-md-4 JdropS">
-                        <button class="btn btn-secondary dropdown-toggle Jdrop" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Rating
+                        <button class="btn btn-secondary" type="button" onclick = "animation(); emptyCard();">
+                        Animation
                         </button>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -113,33 +120,7 @@
 
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-          <div class="logo-footer">
-            <img src="./Assets/DV_104_Logo_Final-02.png" alt=""  href="/index.html">
-          </div>
-          <div class="quick-menu">
-            <h4>QUICK MENU</h4>
-            <h6 href="/index.html">HOME</h6>
-            <h6>LIBRARY</h6>
-            <h6>WATCH LIST</h6>
-          </div>
     
-          <div class="contact-us">
-            <h4>CONTACT US</h4>
-            <h6>+27 98 678 483</h6>
-            <h6>Info@shufflewatch.co.za</h6>
-          </div>
-          <div class="social-links">
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-tiktok"></i>
-          </div>
-        </div>
-        <div class="color-box">
-          <div class="color-text"><p>© 2023 SHUFFLEWATCH. Inc. All rights reserved.</p></div>
-        </div>
-    </footer>
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

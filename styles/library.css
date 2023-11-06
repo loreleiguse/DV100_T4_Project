@@ -3,6 +3,8 @@
 font-family: 'Dela Gothic One', cursive;
 font-family: 'Josefin Sans', sans-serif;
 */
+
+
 .Jform-control{
     background-image: url(../assets/libraryPage/searchIcon.png);
     background-position: right;
@@ -12,15 +14,12 @@ font-family: 'Josefin Sans', sans-serif;
     border: px50;
     border-color: #FF7315;
   }
-  .JlogoImg{
-    height: 50px;
-    width: 80px;
-  }
+
 
   .Jbody{
     
     overflow-x: hidden;
-
+    
     background-repeat: no-repeat;
     background-color: #3A3535;
     background-size: cover;
@@ -30,7 +29,7 @@ font-family: 'Josefin Sans', sans-serif;
     text-align: center;
  }
  .Jhead{
-    width:60%;
+    width:auto;
     height:100%;
     margin-left: 10%;
     margin-right: auto;
@@ -91,7 +90,7 @@ font-family: 'Josefin Sans', sans-serif;
     background-size: 100%
   }
   .JrowS{
-    width: 75%;
+    width: 100%;
     margin-top: 50px;
   }
   .Jcol1{
