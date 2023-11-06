@@ -22,7 +22,25 @@ $(document).ready(function () {
   });
 });
 
-  
+let slideMovies = [];
+$(document).ready(function () {
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt10676048%2Ctt0001702%2Ctt0001856&info=base_info',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
+            'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+        }
+    };
+    
+    $.ajax(settings).done(function (info) {
+        console.log(info);
+    });
+});
+
+
 let movies = [];
 
 $(document).ready(function () {
@@ -52,7 +70,7 @@ $(document).ready(function () {
                 image: movie.primaryImage.url,
             }));
 
-            const selectedMovies = movies.filter((movie, index) => [0, 2, 3, 4].includes(index));
+            const selectedMovies = movies.filter((movie, index) => [0, 1, 2, 6].includes(index));
 
             console.log(selectedMovies);
             displayTrendingMovies(selectedMovies);
