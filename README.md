@@ -1,6 +1,6 @@
 
-![EvergreenLogo](/assets/DV_104_Logo_Final-02.png)
-
+![shufflewatchLogo](/assets/DV_104_Logo_Final-02.png)
+ 
 Demonstration Video and Signed Plagiarism Document Included Below
 
 [Demonstration Video »]()
@@ -28,23 +28,23 @@ The project was created for an Interactive Development 100 assignment during the
 
 ### Sign In / Sign Up Page
 
-![EvergreenLogo]()
+![shufflewatchLogo](./Assets/mockups/Sign%20in.png)
 
 ### Homepage
 
-![EvergreenLogo]()
+![shufflewatchLogo](./Assets/mockups/Home%20desktop.png)
 
 ### Movie Library Page
 
-![EvergreenLogo]()
+![shufflewatchLogo](./Assets/mockups/libray.png)
 
 ### Individual Movie Page
 
-![EvergreenLogo]()
+![shufflewatchLogo](./Assets/mockups/Page.png)
 
 ### Movie Watchlist Page
 
-![EvergreenLogo]()
+![shufflewatchLogo](./Assets/mockups/watchlist.png)
 
 ## Getting Started
 
