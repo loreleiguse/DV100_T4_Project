@@ -43,7 +43,7 @@
             <p>However, when society shuns him and brands him as a freak,</p>
             <p> decides to embrace the life of crime and chaos.</p>
             <button class="mt-4">Watch Now</button>
-            <button class="invisible-button" >Add to Watchlist</button>
+            <button id="add-to-watchlist"class="invisible-button" onclick="addwatchlist()" >Add to Watchlist</button>
            <img src="../assets/Bookmark.svg"alt="bookmark" class="button-image">
           </div>
         </div>
@@ -204,6 +204,42 @@
         });
     });
 
+// Function to add "The Joker" to local storage
+  function addToWatchlist() {
+    // Create a JavaScript object with movie information
+    const jokerMovie = {
+      title: "The Joker",
+      director: "Todd Phillips",
+      year: 2019, 
+      rating: 8.5, 
+    };
+
+    // Get the current watchlist from local storage (if any)
+    let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+    // Check if "The Joker" is already in the watchlist
+    const isJokerInWatchlist = watchlist.some(movie => movie.title === 'The Joker');
+
+    if (!isJokerInWatchlist) {
+      // If not in the watchlist, add it
+      watchlist.push(jokerMovie);
+
+      // Update the watchlist in local storage
+      localStorage.setItem('watchlist', JSON.stringify(watchlist));
+
+      //  feedback to the user
+      alert('The Joker has been added to your watchlist.');
+    } else {
+      alert('The Joker is already in your watchlist.');
+    }
+  }
+
+  // Add a click event handler to the "Add to Watchlist" button
+  const addToWatchlistButton = document.getElementById('add-to-watchlist');
+  addToWatchlistButton.addEventListener('click', addToWatchlist);
+
+
+        
       
     </script>
     
