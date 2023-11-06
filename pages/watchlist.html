@@ -49,109 +49,129 @@
         </div>
     </div>
 
-
-        
 <!-- movie cards -->
-    <div class="container card-container">
+ 
+
+ <div class="container card-container">
     <div class="row gy-4">
         <h3>My Watchlist</h3>
         <!-- Card 1 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-1">
                 <!-- Card content -->
                 <img src="../assets/oppenheimer.jpg" class="card-img-top" alt="...">
                 <p>Oppenheimer</p>
                 <p>Christopher Nolan</p>
                 <p>2023</p>
+                <button class="remove-button" data-movie-id="1">
                 <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+                </button>
             </div>
         </div>
         <!-- Card 2 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-2">
                 <!-- Card content -->
                 <img src="../assets/insidious_ the red door.jpg" class="card-img-top" alt="...">
                 <p>Insidious: The Red Door</p>
                 <p>Patrick Wilson</p>
                 <p>2023</p>
+                <button class="remove-button" data-movie-id="3">
                 <p>3.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
-                
+                </button>
             </div>
         </div>
         <!-- Card 3 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-3">
                 <!-- Card content -->
                 <img src="../assets/barbie.jpg" class="card-img-top" alt="...">
                 <p>Barbie</p>
                 <p>Greta Gerwig</p>
                 <p>2023</p>
+                <button class="remove-button" data-movie-id="3">
                 <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+            </button>
             </div>
         </div>
         <!-- Card 4 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-4">
                 <!-- Card content -->
                 <img src="../assets/the flash.jpg" class="card-img-top" alt="...">
                 <p>The Flash <i class="fas fa-laugh-squint    "></i></p>
                 <p>Andres Muschietti</p>
                 <p>2023</p>
+                <button class="remove-button" data-movie-id="4">
                 <p>2.1 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+              </button>
             </div>
+
         </div>
 
         <!-- Card 5 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-5">
                 <!-- Card content -->
                 <img src="../assets/talk to me.jpg" class="card-img-top" alt="...">
                 <p>Talk To Me <i class="fas fa-laugh-squint    "></i></p>
                 <p>Danny Philippou,</p>
                 <p>Micheal Philippou</p>
                 <p>2023</p>
+                <button class="remove-button" data-movie-id="5">
                 <p>4.1 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+                </button>
+                </div>
             </div>
-        </div>
+    
 
         <!-- Card 6 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-6">
                 <!-- Card content -->
                 <img src="../assets/pearl.jpg" class="card-img-top" alt="...">
                 <p>Pearl <i class="fas fa-laugh-squint    "></i></p>
                 <p>Ti West</p>
                 <p>2022</p>
+                <button class="remove-button" data-movie-id="6">
                 <p>4.5 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+                </button>
             </div>
         </div>
 
         <!-- Card 7 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-7">
                 <!-- Card content -->
                 <img src="../assets/superbad.jpg" class="card-img-top" alt="...">
                 <p>Greg Mottola<i class="fas fa-laugh-squint    "></i></p>
                 <p>Andres Muschietti</p>
                 <p>2007</p>
+                <button class="remove-button" data-movie-id="7">
                 <p>4.8 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+                </button>
             </div>
         </div>
 
-        <!-- Card  -->
+        <!-- Card 8 -->
         <div class="col-md-3">
-            <div class="card-container">
+            <div class="card-container" id="movie-8">
                 <!-- Card content -->
                 <img src="../assets/Léon_The Professional.jpg" class="card-img-top" alt="...">
                 <p>Léon: The Professional <i class="fas fa-laugh-squint    "></i></p>
                 <p>Luc Besson</p>
                 <p>1994</p>
+                <button class="remove-button" data-movie-id="8">
                 <p>4.5 Rating <img src="../assets/Minus.svg" alt="bookmark" class="button-image"></p> 
+              </button>
             </div>
         </div>
        
-    </div>
+    </di>
 </div>
+
+        
+
 
    
     <!-- Javascript -->
@@ -162,168 +182,29 @@
     
     <!-- Javascript for Watchlist -->
     <script>
-
-        // Remove Movie from Watchlist
-        // Get all the "Remove" buttons
-const removeButtons = document.querySelectorAll('.button-image');
-
-// Function to handle the removal of a movie
-function removeMovie(event) {
-    // Find the parent card container
-    const cardContainer = event.target.closest('.card-container');
-
-    // Retrieve the movie list from local storage
-    const movieList = JSON.parse(localStorage.getItem('movieList')) || [];
-
-    // Find the index of the movie in the list (you may need to modify this based on your data structure)
-    const index = Array.from(cardContainer.parentElement.children).indexOf(cardContainer);
-
-    // Remove the movie from the list
-    if (index !== -1) {
-        movieList.splice(index, 1);
+        // Add click event listeners to Remove buttons
+   // Get all the remove buttons
+   
+ 
+    // Function to handle card removal
+    function removeMovieCard(movieId) {
+        const cardToRemove = document.getElementById('movie-' + movieId);
+        if (cardToRemove) {
+            cardToRemove.remove();
+        }
     }
 
-    // Save the updated movie list in local storage
-    localStorage.setItem('movieList', JSON.stringify(movieList));
+    // Add click event handlers to all "Minus" SVG icons
+    const minusIcons = document.querySelectorAll('.remove-button');
+    minusIcons.forEach((icon) => {
+        icon.addEventListener('click', function () {
+            // Get the movie ID from the data attribute
+            const movieId = icon.getAttribute('data-movie-id');
+            removeMovieCard(movieId);
+        });
+    });
 
-    // Remove the card container from the DOM
-    cardContainer.parentElement.removeChild(cardContainer);
-}
-
-// Attach a click event listener to each "Remove" button
-buttonImage.forEach((button) => {
-    button.addEventListener('click', removeMovie);
-});
-
-
-
-
-        // Check if local storage has the movie list
-        if (localStorage.getItem('movieList')) {
-            // Retrieve the movie list from local storage
-            const movieList = JSON.parse(localStorage.getItem('movieList'));
-    
-            // Function to create a movie card
-            function createMovieCard(movie) {
-                const cardContainer = document.createElement('div');
-                cardContainer.classList.add('col-md-3');
-    
-                const cardContent = document.createElement('div');
-                cardContent.classList.add('card-container');
-    
-                const movieImage = document.createElement('img');
-                movieImage.src = movie.image; 
-                movieImage.classList.add('card-img-top');
-                movieImage.alt = 'Movie Image';
-    
-                const movieTitle = document.createElement('p');
-                movieTitle.textContent = movie.title;
-    
-                const movieDirector = document.createElement('p');
-                movieDirector.textContent = movie.director;
-    
-                const movieYear = document.createElement('p');
-                movieYear.textContent = movie.year;
-    
-                const movieRating = document.createElement('p');
-                movieRating.textContent = movie.rating;
-    
-                // Append all elements to the card container
-                cardContent.appendChild(movieImage);
-                cardContent.appendChild(movieTitle);
-                cardContent.appendChild(movieDirector);
-                cardContent.appendChild(movieYear);
-                cardContent.appendChild(movieRating);
-    
-                cardContainer.appendChild(cardContent);
-    
-                return cardContainer;
-            }
-    
-            // Get the container to display movie cards
-            const movieContainer = document.querySelector('.row.gy-4');
-    
-            // Loop through the movie list and create movie cards
-            movieList.forEach((movie) => {
-                const movieCard = createMovieCard(movie);
-                movieContainer.appendChild(movieCard);
-            });
-        }
-
-        //  the click event
-    document.querySelector('.invisible-button').addEventListener('click', function () {
-    // Retrieve the movie list from local storage
-    const movieList = JSON.parse(localStorage.getItem('movieList')) || [];
-
-    // Add the selected movie to the list
-    const movie =[
-    {
-        title: 'Oppenheimer',
-        director: 'Christopher Nolan',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-    {
-        title: 'Insidious: The Red Door',
-        director: 'Patrick Wilson',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-    {
-        title: 'Oppenheimer',
-        director: 'Christopher Nolan',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-    {
-        title: 'Oppenheimer',
-        director: 'Christopher Nolan',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-    {
-        title: 'Oppenheimer',
-        director: 'Christopher Nolan',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-    {
-        title: 'Oppenheimer',
-        director: 'Christopher Nolan',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-    {
-        title: 'Oppenheimer',
-        director: 'Christopher Nolan',
-        year: '2023',
-        rating: '4.8',
-        image: '',
-    },
-
-
-
-
-    ];
-
-    movieList.push(movie);
-
-    // Save the updated movie list in local storage
-    localStorage.setItem('movieList', JSON.stringify(movieList));
-});
-
+      
     </script>
     
  
