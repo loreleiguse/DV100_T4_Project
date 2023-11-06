@@ -88,12 +88,12 @@ h1 {
         
         /* navigation */
 
-        .navbar-brand {
+        .z-navbar-brand {
     display: flex;
     align-items: center;
 }
 
-.navbar-brand img {
+.z-navbar-brand img {
     width: 350px;
 
 }
